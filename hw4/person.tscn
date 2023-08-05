@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://divu5phimoqc3"]
+
+[ext_resource type="Script" path="res://scripts/person.gd" id="1_c2ddl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_012l2"]
+albedo_color = Color(0.384314, 0.411765, 0.992157, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_mrpit"]
+material = SubResource("StandardMaterial3D_012l2")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_62rxu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rws6b"]
+transparency = 1
+blend_mode = 3
+albedo_color = Color(0.952941, 0, 0, 0.545098)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dxxsi"]
+material = SubResource("StandardMaterial3D_rws6b")
+size = Vector3(1, 0.1, 1)
+
+[node name="person" type="CharacterBody3D" groups=["unit"]]
+script = ExtResource("1_c2ddl")
+
+[node name="mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_mrpit")
+
+[node name="collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_62rxu")
+
+[node name="box" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("BoxMesh_dxxsi")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://brnv2a5fdeuwe"]
+
+[ext_resource type="Script" path="res://person/script_boneco.gd" id="1_bwun0"]
+[ext_resource type="PackedScene" uid="uid://5h45okoomgai" path="res://person/Mob/ex/boneco.gltf" id="1_glg1q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t5xfn"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.82095, 0)
+script = ExtResource("1_bwun0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(5.96592, 0, 0, 0, 7.16992, 0, 0, 0, 2.99788, 0.119424, 3.44443, 0.14928)
+shape = SubResource("BoxShape3D_t5xfn")
+
+[node name="boneco" parent="." instance=ExtResource("1_glg1q")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)

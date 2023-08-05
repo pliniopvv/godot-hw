@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://bxjpe3wrotsw7"]
+
+[ext_resource type="Script" path="res://world/RigidBody3D.gd" id="1_iq4vw"]
+[ext_resource type="Script" path="res://world/terrain.gd" id="2_4af13"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_0unj3"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_26k0e"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_bw2yx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xebr3"]
+size = Vector3(0.962933, 0.673061, 1)
+
+[node name="world" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -14.5113, 1.44211)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 21.4635, -1.44651)
+light_energy = 12.597
+light_indirect_energy = 1.116
+light_volumetric_fog_energy = 1.024
+spot_range = 26.837
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.793003, 0.37373, -0.481116, 2.37596e-08, 0.789727, 0.613459, 0.609218, -0.486474, 0.626256, -4.38491, 6.25421, 6.45272)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.862896, 3.52388, -0.737698)
+script = ExtResource("1_iq4vw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+mesh = SubResource("SphereMesh_0unj3")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, -2.98023e-08, 2.08616e-07, 3.57628e-07, 1, -4.76837e-07, 0, 0, 1, 0, 0, 0)
+shape = SubResource("SphereShape3D_26k0e")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(127.731, 0, 0, 0, 1, 0, 0, 0, 84.2351, -0.0623512, 1.35487, 0.00272214)
+
+[node name="terrain" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.968527, 0, 0, 0, 0.633466, 0, 0, 0, 0.971608, 0, 0, 0)
+mesh = SubResource("BoxMesh_bw2yx")
+skeleton = NodePath("../..")
+script = ExtResource("2_4af13")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.96362, 0, 0, 0)
+shape = SubResource("BoxShape3D_xebr3")

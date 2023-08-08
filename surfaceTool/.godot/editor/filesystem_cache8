@@ -1,0 +1,13 @@
+2a60927148abd1d33b818b535e306557
+::res://::1691530506
+icon.svg::CompressedTexture2D::8226885382717820917::1691371458::1691424579::1::::<><>::
+texture_shader.gdshader::Shader::-1::1691530506::0::1::::<><>::
+terrain_color.gdshader::Shader::-1::1691530506::0::1::::<><>::
+terrain_gen.gdshader::Shader::-1::1691530506::0::1::::<><>::
+TerrainGen.gd::GDScript::-1::1691529670::0::1::::<>MeshInstance3D<>::
+world.gd::GDScript::-1::1691372278::0::1::::<>Node3D<>::
+world.tscn::PackedScene::6705465759613813498::1691530506::0::1::::<><>::res://texture_shader.gdshader<>uid://7w08myerjfrf<>res://TerrainGen.gd<>uid://dm1kq0ksgttjx
+::res://texture/::1691530572
+grass2.jpg::CompressedTexture2D::6664267934542103990::1691530572::1691530583::1::::<><>::
+grass.jpg::CompressedTexture2D::2293036830584701747::1691528880::1691530244::1::::<><>::
+rock.jpg::CompressedTexture2D::8055839068329811405::1691528928::1691530247::1::::<><>::

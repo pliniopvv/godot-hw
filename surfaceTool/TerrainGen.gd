@@ -1,12 +1,14 @@
 @tool
 extends MeshInstance3D
 
-@export var xSize = 20
-@export var zSize = 20
-@export var noiseOffset = 0.5
-@export var terrainHeight = 5
-@export var update = false
-@export var clear_vert_vis = false
+@export_range(20, 400, 1) var Terrain_Size := 100
+@export_range(1, 100, 1) var resolution := 30
+
+const center_offset = 0.5
+@export var Terrain_Max_Height = 5
+@export var Noise_Offset = 0.5
+@export var create_collision = false
+@export var remove_collision = false
 
 var min_height = 0
 var max_height = 1
@@ -24,33 +26,28 @@ func generate_terrain():
 	
 	
 	surftool.begin(Mesh.PRIMITIVE_TRIANGLES)
-	for z in range(zSize+1):
-		for x in range(xSize+1):
-			var y = n.get_noise_2d(x*noiseOffset,z*noiseOffset) * terrainHeight
-			
-			if y < min_height and y != null:
-				min_height = y
-			if y > max_height and y != null:
-				max_height = y
-			
+	for z in resolution+1:
+		for x in resolution+1:
+			var percent = Vector2(x,z)/resolution
+			var pointOnMesh = Vector3((percent.x-center_offset),0,(percent.y-center_offset))
+			var vertex = pointOnMesh * Terrain_Size
+			vertex.y = n.get_noise_2d(x*Noise_Offset,z*Noise_Offset) * Terrain_Max_Height
 			
 			var uv = Vector2()
-			uv.x = inverse_lerp(0,xSize,x)
-			uv.y = inverse_lerp(0,zSize,z)
+			uv.x = percent.x
+			uv.y = percent.y
 			surftool.set_uv(uv)
-			
-			surftool.add_vertex(Vector3(x,y,z))
-			draw_sphere(Vector3(x,y,z))
+			surftool.add_vertex(vertex)
 			
 	var vert = 0
-	for z in zSize:
-		for x in xSize:
+	for z in resolution:
+		for x in resolution:
 			surftool.add_index(vert+0)
 			surftool.add_index(vert+1)
-			surftool.add_index(vert+xSize+1)
-			surftool.add_index(vert+xSize+1)
+			surftool.add_index(vert+resolution+1)
+			surftool.add_index(vert+resolution+1)
 			surftool.add_index(vert+1)
-			surftool.add_index(vert+xSize+2)
+			surftool.add_index(vert+resolution+2)
 			vert+=1
 		vert+=1
 	surftool.generate_normals()
@@ -72,12 +69,31 @@ func draw_sphere(pos: Vector3):
 	sphere.height = 0.2
 	ins.mesh = sphere
 
+
+var last_res = 0
+var last_size = 0
+var last_height = 0
+var last_offset = 0
 func _process(delta):
-	if update:
+	if resolution != last_res or Terrain_Size != last_size or Terrain_Max_Height != last_height or Noise_Offset != last_offset:
 		generate_terrain()
-		update = false
-	
-	if clear_vert_vis:
+		last_res = resolution
+		last_size = Terrain_Size
+		last_height = Terrain_Max_Height
+		last_offset = center_offset
+	if remove_collision:
+		clear_collision()
+		remove_collision = false
+	if create_collision:
+		create_trimesh_collision()
+		create_collision = false
+		
+
+func generate_collision():
+	clear_collision()
+	create_trimesh_collision()
+
+func clear_collision():
+	if get_child_count() > 0:
 		for i in get_children():
 			i.free()
-		clear_vert_vis = false

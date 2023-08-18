@@ -1,0 +1,15 @@
+2a60927148abd1d33b818b535e306557
+::res://::1692237580
+icon.svg::CompressedTexture2D::6436115763216994278::1692234152::1692234162::1::::<><>::
+::res://assets/::1692234394
+::res://assets/texture/::1692234398
+grass2.jpg::CompressedTexture2D::6664267934542103990::1691530572::1692234397::1::::<><>::
+grass.jpg::CompressedTexture2D::2293036830584701747::1691528880::1692234397::1::::<><>::
+rock.jpg::CompressedTexture2D::8055839068329811405::1691528928::1692234397::1::::<><>::
+sand.jpg::CompressedTexture2D::8686416129456744314::1691961434::1692234398::1::::<><>::
+::res://scenes/::1692237583
+chunk.tscn::PackedScene::4997598707603794210::1692237582::0::1::::<><>::res://scenes/scripts/gen_chunk.gd<>uid://7w08myerjfrf
+HUG.tscn::PackedScene::1710792920172210202::1692237583::0::1::::<><>::
+world.tscn::PackedScene::8265377898397888946::1692237583::0::1::::<><>::uid://cdg4yq7y28q2u<>uid://ymyrk6ibrjty
+::res://scenes/scripts/::1692236697
+gen_chunk.gd::GDScript::-1::1692236697::0::1::::<>Node3D<>::

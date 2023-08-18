@@ -15,8 +15,11 @@ float inverseLerp(float a, float b, float value) {
 void fragment() {
 	float height = vertex_y;
 	float position = inverseLerp(min_height, max_height, height);
-	vec3 color = texture(terrain_color, vec2(position,0)).rgb;
-	ALBEDO = color;
+	//float position = clamp(min_height, max_height, height);
+	//vec3 color = texture(terrain_color, vec2(position,0)).rgb;
+	//vec3 color = vec3(UV, 0.0);
+	//ALBEDO = color;
+	COLOR = vec4(UV, 0.5, 1.0);
 }
 
 

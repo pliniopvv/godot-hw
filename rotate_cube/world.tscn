@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://bigdvg3132kxn"]
+
+[ext_resource type="Texture2D" uid="uid://bq76fjo5q2lo1" path="res://icon.svg" id="1_35pxx"]
+[ext_resource type="Script" path="res://cube.gd" id="2_utmox"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mvp24"]
+albedo_texture = ExtResource("1_35pxx")
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_2stfu"]
+material = SubResource("StandardMaterial3D_mvp24")
+
+[node name="world" type="Node3D"]
+
+[node name="cube" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_2stfu")
+script = ExtResource("2_utmox")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.35888)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 89.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 73.0
+grow_horizontal = 2
+
+[node name="HSlider" type="HSlider" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.669649, 0.657965, -0.344459, 0, 0.463806, 0.885937, 0.742678, -0.593267, 0.310588, -5.20937, 1.72877, 4.45533)
+
+[connection signal="value_changed" from="Control/VBoxContainer/HSlider" to="cube" method="set_angle"]

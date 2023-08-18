@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp02ti01ot07w"]
+
+[ext_resource type="PackedScene" uid="uid://cdg4yq7y28q2u" path="res://scenes/chunk.tscn" id="1_28xvb"]
+[ext_resource type="PackedScene" uid="uid://ymyrk6ibrjty" path="res://scenes/HUG.tscn" id="2_4m5cx"]
+
+[node name="world" type="Node3D"]
+
+[node name="Control" parent="." instance=ExtResource("2_4m5cx")]
+offset_bottom = 64.0
+
+[node name="chunk" parent="." instance=ExtResource("1_28xvb")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, -6.18172e-08, 6.18172e-08, 0, 0.707107, 0.707107, -8.74228e-08, 0.707107, -0.707107, 1.5, 2, -1.5)
+current = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.998107, -0.037455, 0.0487806, 0, 0.793162, 0.609011, -0.0615014, 0.607858, -0.791661, 1.18091, 2.89285, 5.89518)

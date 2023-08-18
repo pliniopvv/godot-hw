@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdg4yq7y28q2u"]
+
+[ext_resource type="Script" path="res://scenes/scripts/gen_chunk.gd" id="1_qkcc3"]
+[ext_resource type="Texture2D" uid="uid://7w08myerjfrf" path="res://assets/texture/grass.jpg" id="2_c3y0d"]
+
+[node name="chunk" type="Node3D"]
+script = ExtResource("1_qkcc3")
+x_size = 3
+z_size = 3
+texture = ExtResource("2_c3y0d")

@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4dcgc0f4wask"]
+
+[ext_resource type="Shader" path="res://simple_texture.gdshader" id="1_lo3qo"]
+[ext_resource type="Script" path="res://scripts/ArrayMesh.gd" id="1_xfliu"]
+[ext_resource type="Texture2D" uid="uid://c17hrwhou6ui5" path="res://texture/grass2.jpg" id="2_oqv03"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_12hiw"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 1.00001, 1, 1),
+"format": 1,
+"primitive": 3,
+"vertex_count": 6,
+"vertex_data": PackedByteArray(0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63)
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tvnnp"]
+render_priority = 0
+shader = ExtResource("1_lo3qo")
+shader_parameter/terrain = ExtResource("2_oqv03")
+
+[node name="world" type="Node3D"]
+
+[node name="arrayMesh" type="MeshInstance3D" parent="."]
+rotation_order = 1
+mesh = SubResource("ArrayMesh_12hiw")
+surface_material_override/0 = SubResource("ShaderMaterial_tvnnp")
+script = ExtResource("1_xfliu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.541967, -0.838069, 0.0625431, -0.681238, 0.394527, -0.616655, 0.492125, -0.376813, -0.784745, -2.59502, 1.91305, 2.0271)

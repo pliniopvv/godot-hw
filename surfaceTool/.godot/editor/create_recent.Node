@@ -1,4 +1,5 @@
 MeshInstance3D
-WorldEnvironment
 DirectionalLight3D
+SpotLight3D
+WorldEnvironment
 Camera3D

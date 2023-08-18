@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 @export_category("Básicas")
 @export var SPEED = 5.0
-@export var JUMP_VELOCITY = 4.5
+@export var JUMP_VELOCITY = 8
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -33,8 +33,8 @@ func _physics_process(delta):
 	
 	if Input.is_action_pressed("attack"):
 		$sword.visible = true
-		$anim.play("ninja_attack")
-		$sword/anim.play("swordattack")
+		$anim.play("attack2")
+		$sword/anim.play("sworldattack2")
 	elif direction != Vector3.ZERO:
 		direction = direction.normalized()
 		$anim.play(animation)

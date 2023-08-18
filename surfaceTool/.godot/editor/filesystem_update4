@@ -1,5 +1,3 @@
-res://world.tscn
-res://terrain_gen.gdshader
+res://world_gen.tscn
 res://TerrainGen.gd
-res://terrain_color.gdshader
-res://texture_shader.gdshader
+res://scripts/terrain_world_gen.gd

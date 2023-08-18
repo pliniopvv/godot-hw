@@ -1,0 +1,5 @@
+res://scenes/world.tscn
+res://scenes/chunk.tscn
+res://scenes/HUG.tscn
+res://Autoloads/Kernel.gd
+res://scenes/scripts/gen_chunk.gd

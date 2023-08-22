@@ -1,3 +1,3 @@
 extends Node
 
-signal interactive(value: bool)
+var interactive: bool = false

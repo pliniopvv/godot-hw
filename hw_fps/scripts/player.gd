@@ -40,7 +40,7 @@ func _physics_process(delta):
 func _input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(deg_to_rad(-event.relative.x * mouse_sensitivity))
-
+		
 		cam_ver -= event.relative.y * mouse_sensitivity
 		print(cam_ver)
 		cam_ver = clamp(cam_ver,cam_limit_down, cam_limit_up)

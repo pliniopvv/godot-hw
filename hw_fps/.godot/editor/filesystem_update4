@@ -3,3 +3,5 @@ res://scripts/hud.gd
 res://play.tscn
 res://nodes/player.tscn
 res://scripts/action.gd
+res://autoloads/HUD.gd
+res://scripts/player.gd

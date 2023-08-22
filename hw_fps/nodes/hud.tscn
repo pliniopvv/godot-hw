@@ -11,9 +11,8 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("1_ekqws")
 
-[node name="action" type="VBoxContainer" parent="."]
+[node name="action" type="VBoxContainer" parent="." node_paths=PackedStringArray("action")]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -27,6 +26,8 @@ offset_right = 88.0
 offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ekqws")
+action = NodePath(".")
 
 [node name="text" type="Label" parent="action"]
 layout_mode = 2

@@ -6,4 +6,4 @@ func _ready():
 
 
 func _process(delta):
-	HUD.interactive.emit(is_colliding())
+	HUD.interactive = is_colliding()

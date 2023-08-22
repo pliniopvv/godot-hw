@@ -22,6 +22,6 @@ shape = SubResource("CapsuleShape3D_cwx5j")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1, 0)
 current = true
 
-[node name="action" type="RayCast3D" parent="visao"]
+[node name="actionCast" type="RayCast3D" parent="visao"]
 target_position = Vector3(0, 0, -2)
 script = ExtResource("2_rh5i0")

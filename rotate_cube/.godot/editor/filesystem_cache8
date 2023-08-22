@@ -1,3 +1,5 @@
 2a60927148abd1d33b818b535e306557
-::res://::1692236837
+::res://::1692718906
+cube.gd::GDScript::-1::1692237456::0::1::::<>MeshInstance3D<>::
 icon.svg::CompressedTexture2D::3577393921499748538::1692236832::1692236857::1::::<><>::
+world.tscn::PackedScene::2960537711586457499::1692237503::0::1::::<><>::uid://bq76fjo5q2lo1<>res://cube.gd

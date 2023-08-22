@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7x8puhnagvpn"]
+
+[ext_resource type="PackedScene" uid="uid://dhc7ibgxenjmv" path="res://assets/blender/ruax.gltf" id="1_dsibx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hmixu"]
+size = Vector3(1, 0.0286785, 1)
+
+[node name="ruax" instance=ExtResource("1_dsibx")]
+
+[node name="ruat" parent="." index="0"]
+transform = Transform3D(0, 0, -4, 0, 4, 0, 4, 0, 0, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ruat" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ruat/StaticBody3D" index="0"]
+transform = Transform3D(2.00171, 0, 0, 0, 0.794069, 0, 0, 0, 2.00291, 0, 0.00982215, 0)
+visible = false
+shape = SubResource("BoxShape3D_hmixu")

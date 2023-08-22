@@ -1,0 +1,13 @@
+Node3D
+Control
+VBoxContainer
+Label
+RayCast3D
+DirectionalLight3D
+LightmapGI
+Area3D
+Camera3D
+CollisionShape3D
+MeshInstance3D
+CharacterBody3D
+Node

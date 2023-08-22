@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm534qxjl6n7h"]
+
+[ext_resource type="PackedScene" uid="uid://ca57xvip8kpvm" path="res://scenes/blocks/rua.tscn" id="1_234vr"]
+[ext_resource type="PackedScene" uid="uid://c7x8puhnagvpn" path="res://scenes/blocks/ruax.tscn" id="2_mvjtb"]
+
+[node name="world" type="Node3D"]
+
+[node name="quadra" type="Node3D" parent="."]
+
+[node name="lp-rua" parent="quadra" instance=ExtResource("1_234vr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="lp-rua2" parent="quadra" instance=ExtResource("1_234vr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="lp-rua3" parent="quadra" instance=ExtResource("1_234vr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="lp-rua4" parent="quadra" instance=ExtResource("1_234vr")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10, 0, -9)
+
+[node name="lp-rua5" parent="quadra" instance=ExtResource("1_234vr")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10, 0, -7)
+
+[node name="lp-rua6" parent="quadra" instance=ExtResource("1_234vr")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10, 0, -5)
+
+[node name="lp-rua11" parent="quadra" instance=ExtResource("1_234vr")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4, 0, -7)
+
+[node name="lp-rua13" parent="quadra" instance=ExtResource("1_234vr")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4, 0, -9)
+
+[node name="lp-rua12" parent="quadra" instance=ExtResource("1_234vr")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4, 0, -5)
+
+[node name="lp-rua7" parent="quadra" instance=ExtResource("1_234vr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -14)
+
+[node name="lp-rua8" parent="quadra" instance=ExtResource("1_234vr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -14)
+
+[node name="lp-rua9" parent="quadra" instance=ExtResource("1_234vr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -14)
+
+[node name="ruax" parent="." instance=ExtResource("2_mvjtb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -14)
+
+[node name="ruax2" parent="." instance=ExtResource("2_mvjtb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="ruax3" parent="." instance=ExtResource("2_mvjtb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -14)
+
+[node name="ruax4" parent="." instance=ExtResource("2_mvjtb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)

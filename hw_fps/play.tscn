@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://b61ofkjxb1m4g"]
+
+[ext_resource type="PackedScene" uid="uid://dg72na85hae2v" path="res://nodes/world.tscn" id="1_lkr4d"]
+[ext_resource type="PackedScene" uid="uid://dn56400swd8y1" path="res://nodes/player.tscn" id="2_54hb2"]
+[ext_resource type="PackedScene" uid="uid://glem7utf2upp" path="res://nodes/hud.tscn" id="3_2qb0q"]
+[ext_resource type="Script" path="res://scripts/hud.gd" id="3_p7km0"]
+
+[node name="kernel" type="Node3D"]
+
+[node name="world" parent="." instance=ExtResource("1_lkr4d")]
+script = ExtResource("3_p7km0")
+
+[node name="sol" type="DirectionalLight3D" parent="world"]
+transform = Transform3D(0.555149, -0.378202, -0.740792, 0.831751, 0.25243, 0.494439, 0, -0.890642, 0.454706, -22.3085, 5.49273, 17.3117)
+light_energy = 0.8
+shadow_enabled = true
+
+[node name="player" parent="." instance=ExtResource("2_54hb2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 8)
+
+[node name="hud" parent="." instance=ExtResource("3_2qb0q")]
+script = null

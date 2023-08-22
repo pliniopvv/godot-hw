@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ca57xvip8kpvm"]
+
+[ext_resource type="PackedScene" uid="uid://dq030pp0daou5" path="res://assets/blender/lp-rua.gltf" id="1_bqlec"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jmkfh"]
+
+[node name="lp-rua" instance=ExtResource("1_bqlec")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Plane" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane/StaticBody3D" index="0"]
+transform = Transform3D(1.99724, 0, 0, 0, 0.0785102, 0, 0, 0, 4, 0, 0.0387425, 0)
+visible = false
+shape = SubResource("BoxShape3D_jmkfh")

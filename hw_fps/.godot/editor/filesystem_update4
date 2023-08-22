@@ -1,0 +1,5 @@
+res://nodes/hud.tscn
+res://scripts/hud.gd
+res://play.tscn
+res://nodes/player.tscn
+res://scripts/action.gd

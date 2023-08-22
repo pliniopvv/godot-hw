@@ -43,7 +43,6 @@ metadata/_editor_floor_ = Vector3(0, 1, 0)
 
 [node name="player" parent="." instance=ExtResource("1_ym10r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.00393, 0.695793, -7.9412)
-visible = false
 
 [node name="isometrica" type="Camera3D" parent="player"]
 transform = Transform3D(-0.704993, 0.423188, -0.569119, -2.98023e-08, 0.802464, 0.5967, 0.709214, 0.42067, -0.565732, -6.64128, 8.66309, -7.19228)

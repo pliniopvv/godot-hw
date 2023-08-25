@@ -1,11 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://8qgt5icqfrv7"]
+[gd_scene load_steps=13 format=3 uid="uid://8qgt5icqfrv7"]
 
 [ext_resource type="Texture2D" uid="uid://bk3a5j2ffqjf5" path="res://icon.svg" id="1_jbb13"]
+[ext_resource type="Script" path="res://NavigationRegion3D.gd" id="1_mdhgu"]
 [ext_resource type="Script" path="res://AIpathfinding.gd" id="2_tm1gd"]
 
-[sub_resource type="NavigationMesh" id="NavigationMesh_0v7l7"]
-vertices = PackedVector3Array(-9.5, 0.5, 0, -6.5, 0.5, 0, -6.25, 0.5, -0.75, -9.5, 0.5, -9.5, 6.25, 0.5, -0.75, 6.5, 0.5, 0, 9.5, 0.5, 0, 9.5, 0.5, -9.5, 6.25, 0.5, -0.75, 9.5, 0.5, -9.5, -1.90735e-06, 0.5, -9.5, -1.90735e-06, 0.5, -0.75, -1.90735e-06, 0.5, -9.5, -9.5, 0.5, -9.5, -6.25, 0.5, -0.75, -1.90735e-06, 0.5, -0.75, 9.5, 0.5, 0, 6.5, 0.5, 0, 6.25, 0.5, 0.75, 9.5, 0.5, 9.5, -6.25, 0.5, 0.75, -6.5, 0.5, 0, -9.5, 0.5, 0, -9.5, 0.5, 9.5, -6.25, 0.5, 0.75, -9.5, 0.5, 9.5, -1.90735e-06, 0.5, 9.5, -1.90735e-06, 0.5, 0.75, -1.90735e-06, 0.5, 9.5, 9.5, 0.5, 9.5, 6.25, 0.5, 0.75, -1.90735e-06, 0.5, 0.75)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 6), PackedInt32Array(6, 4, 7), PackedInt32Array(11, 10, 8), PackedInt32Array(8, 10, 9), PackedInt32Array(15, 14, 12), PackedInt32Array(12, 14, 13), PackedInt32Array(17, 16, 18), PackedInt32Array(18, 16, 19), PackedInt32Array(21, 20, 22), PackedInt32Array(22, 20, 23), PackedInt32Array(27, 26, 24), PackedInt32Array(24, 26, 25), PackedInt32Array(31, 30, 28), PackedInt32Array(28, 30, 29)]
+[sub_resource type="NavigationMesh" id="NavigationMesh_p1btr"]
+vertices = PackedVector3Array(-9.5, 0.5, -9.53674e-07, -6.5, 0.5, -9.53674e-07, -6.25, 0.5, -0.750001, -1.75, 0.5, -6.25, -1, 0.5, -6.5, -1, 0.5, -9.5, -6.25, 0.5, -0.750001, -1, 0.5, -0.750001, -1.75, 0.5, -6.25, -1.75, 0.5, -6.25, -1, 0.5, -9.5, -9.5, 0.5, -9.5, -9.5, 0.5, -9.53674e-07, -6.25, 0.5, -0.750001, 6.25, 0.5, -0.750001, 6.5, 0.5, -9.53674e-07, 9.5, 0.5, -9.53674e-07, -1, 0.5, -9.5, -1, 0.5, -6.5, -0.250002, 0.5, -6.25, -0.250002, 0.5, -6.25, 0.749998, 0.5, -0.750001, 6.25, 0.5, -0.750001, 6.25, 0.5, -0.750001, 9.5, 0.5, -9.53674e-07, 9.5, 0.5, -9.5, -1, 0.5, -9.5, -0.250002, 0.5, -6.25, 0.999998, 0.5, 9.5, 0.999998, 0.5, 6.5, 0.249998, 0.5, 6.25, -6.25, 0.5, 0.749999, -6.5, 0.5, -9.53674e-07, -9.5, 0.5, -9.53674e-07, 0.249998, 0.5, 6.25, -0.750002, 0.5, 0.749999, -6.25, 0.5, 0.749999, -6.25, 0.5, 0.749999, -9.5, 0.5, -9.53674e-07, -9.5, 0.5, 9.5, 0.999998, 0.5, 9.5, 0.249998, 0.5, 6.25, 9.5, 0.5, -9.53674e-07, 6.5, 0.5, -9.53674e-07, 6.25, 0.5, 0.749999, 1.75, 0.5, 6.25, 0.999998, 0.5, 6.5, 0.999998, 0.5, 9.5, 6.25, 0.5, 0.749999, 0.999998, 0.5, 0.749999, 1.75, 0.5, 4.25, 6.25, 0.5, 0.749999, 1.75, 0.5, 4.25, 1.75, 0.5, 6.25, 1.75, 0.5, 6.25, 0.999998, 0.5, 9.5, 9.5, 0.5, 9.5, 9.5, 0.5, -9.53674e-07, 6.25, 0.5, 0.749999)
+polygons = [PackedInt32Array(0, 2, 1), PackedInt32Array(5, 4, 3), PackedInt32Array(8, 7, 6), PackedInt32Array(10, 9, 11), PackedInt32Array(11, 9, 13), PackedInt32Array(11, 13, 12), PackedInt32Array(16, 15, 14), PackedInt32Array(17, 19, 18), PackedInt32Array(22, 21, 20), PackedInt32Array(24, 23, 25), PackedInt32Array(25, 23, 27), PackedInt32Array(25, 27, 26), PackedInt32Array(28, 30, 29), PackedInt32Array(33, 32, 31), PackedInt32Array(36, 35, 34), PackedInt32Array(38, 37, 39), PackedInt32Array(39, 37, 41), PackedInt32Array(39, 41, 40), PackedInt32Array(42, 44, 43), PackedInt32Array(47, 46, 45), PackedInt32Array(50, 49, 48), PackedInt32Array(53, 52, 51), PackedInt32Array(55, 54, 56), PackedInt32Array(56, 54, 58), PackedInt32Array(56, 58, 57)]
 agent_height = 2.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oubis"]
@@ -42,7 +43,8 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 0.609799, 0.792556, 0, -0.792556, 0.609799, 0, 11, 11)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
-navigation_mesh = SubResource("NavigationMesh_0v7l7")
+navigation_mesh = SubResource("NavigationMesh_p1btr")
+script = ExtResource("1_mdhgu")
 
 [node name="terrain" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 2.98023e-08, 0, -2.98023e-08, 1, 0, 0, 9.53674e-07)
@@ -67,8 +69,19 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/wall/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_q4xls")
 
+[node name="wall2" type="MeshInstance3D" parent="NavigationRegion3D"]
+transform = Transform3D(2.18526, 2.93014e-08, -0.245799, 0, 1, 7.45058e-09, 11.7688, -5.44072e-09, 0.0456409, 0, 0.5, 9.53674e-07)
+material_override = SubResource("StandardMaterial3D_ytygx")
+mesh = SubResource("BoxMesh_pc1l6")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/wall2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/wall2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_q4xls")
+
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." node_paths=PackedStringArray("marker3D")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, -6.131)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -6.131)
 script = ExtResource("2_tm1gd")
 marker3D = NodePath("../Marker3D")
 

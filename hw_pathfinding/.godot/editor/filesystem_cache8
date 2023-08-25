@@ -1,4 +1,6 @@
 2a60927148abd1d33b818b535e306557
-::res://::1692748985
+::res://::1692804199
+AIpathfinding.gd::GDScript::-1::1692750582::0::1::::<>CharacterBody3D<>::
 icon.svg::CompressedTexture2D::3146165785658614300::1692748975::1692749023::1::::<><>::
-play.tscn::PackedScene::2349661704332225686::1692749002::0::1::::<><>::
+NavigationRegion3D.gd::GDScript::-1::1692751936::0::1::::<>NavigationRegion3D<>::
+play.tscn::PackedScene::2349661704332225686::1692751997::0::1::::<><>::uid://bk3a5j2ffqjf5<>res://NavigationRegion3D.gd<>res://AIpathfinding.gd

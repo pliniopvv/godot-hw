@@ -17,7 +17,7 @@ func _ready():
 	KernelMouse.area_selection.connect(draw_area)
 	KernelMouse.area_selected.connect(select_area)
 	KernelMouse.right_click.connect(clear_selection)
-	KernelMouse.left_click.connect(move_units)
+#	KernelMouse.left_click.connect(move_units)
 	pass
 	
 func draw_area(selectionView):
@@ -74,7 +74,7 @@ func clear_selection():
 	while selected_units.size() > 0:
 		selected_units[0].set_select(false)
 
-func move_units(destination):
-	if selected_units.size() > 0:
-		for unit in selected_units:
-			unit.move_to(destination)
+#func move_units(destination):
+#	if selected_units.size() > 0:
+#		for unit in selected_units:
+#			unit.move_to(destination)

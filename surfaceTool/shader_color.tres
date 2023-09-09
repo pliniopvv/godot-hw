@@ -1,16 +1,38 @@
-[gd_resource type="VisualShader" load_steps=2 format=3 uid="uid://b4qip3ghqt23y"]
+[gd_resource type="VisualShader" load_steps=3 format=3 uid="uid://b4qip3ghqt23y"]
 
-[sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_74shk"]
-parameter_name = "Texture2DParameter"
+[sub_resource type="VisualShaderNodeVec4Parameter" id="VisualShaderNodeVec4Parameter_2tvu5"]
+output_port_for_preview = 0
+parameter_name = "Vector4Parameter"
+default_value_enabled = true
+default_value = Vector4(0.5, 0.8, 0.7, 0)
+
+[sub_resource type="VisualShaderNodeCompare" id="VisualShaderNodeCompare_ysnaw"]
+function = 2
 
 [resource]
 code = "shader_type spatial;
 render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
 
+uniform vec4 Vector4Parameter = vec4(0.500000, 0.800000, 0.700000, 0.000000);
 
 
+
+void fragment() {
+// Vector4Parameter:2
+	vec4 n_out2p0 = Vector4Parameter;
+
+
+// Output:0
+	ALBEDO = vec3(n_out2p0.xyz);
+
+
+}
 "
-graph_offset = Vector2(118.112, -88.2108)
-nodes/fragment/0/position = Vector2(1380, 180)
-nodes/fragment/4/node = SubResource("VisualShaderNodeTexture2DParameter_74shk")
-nodes/fragment/4/position = Vector2(-40, 200)
+graph_offset = Vector2(-172.637, -113.232)
+nodes/vertex/0/position = Vector2(420, 140)
+nodes/fragment/0/position = Vector2(1460, 180)
+nodes/fragment/2/node = SubResource("VisualShaderNodeVec4Parameter_2tvu5")
+nodes/fragment/2/position = Vector2(900, 180)
+nodes/fragment/3/node = SubResource("VisualShaderNodeCompare_ysnaw")
+nodes/fragment/3/position = Vector2(774.065, 439.124)
+nodes/fragment/connections = PackedInt32Array(2, 0, 0, 0)

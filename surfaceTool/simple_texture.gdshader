@@ -1,20 +1,25 @@
 shader_type spatial;
 
 uniform sampler2D terrain;
-varying float normal_y;
+uniform sampler2D terrain2;
+uniform sampler2D mNoise;
 
+varying float normal_x;
+varying float normal_z;
+uniform float uvscale = 1.0;
 
 void fragment() {
-	float vert_height = normal_y;
-	// Albedo value
-	vec3 grass = texture(terrain, UV*4.0).rgb;
-	// Weight
-	float grass_weight = normal_y;
+	vec3 vertice = vec3(normal_x,0,normal_z);
+	vec3 grama = texture(terrain, UV*uvscale).rgb;
+	vec3 deserto = texture(terrain2, UV*uvscale).rgb;
+	vec3 _n = texture(mNoise, UV*uvscale/100.0).rgb;
 	
-	ALBEDO = grass;
+	vec3 misturado = mix(grama, deserto, _n);
+	ALBEDO = misturado;
 }
 
 
 void vertex() {
-	normal_y = VERTEX.y;
+	normal_x = VERTEX.x;
+	normal_z = VERTEX.z;
 }

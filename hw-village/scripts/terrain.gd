@@ -1,7 +1,8 @@
+@tool
 extends Node3D
 
 @export_category("Configmap")
-@export var size = 300
+@export var size = 50
 var map = {}
 
 @onready var grama = preload("res://blocks/floor.tscn")

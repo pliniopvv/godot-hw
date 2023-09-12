@@ -6,12 +6,12 @@ uniform sampler2D mNoise;
 
 varying float normal_x;
 varying float normal_z;
-uniform float uvscale = 1.0;
+uniform float uvscale = 5.0;
 
 void fragment() {
-	vec3 grama = texture(terrain, UV*uvscale).rgb;
-	vec3 deserto = texture(terrain2, UV*uvscale).rgb;
-	vec3 _n = texture(mNoise, UV*uvscale/100.0).rgb;
+	vec3 grama = texture(terrain, UV*uvscale*5.0).rgb;
+	vec3 deserto = texture(terrain2, UV*uvscale*5.0).rgb;
+	vec3 _n = texture(mNoise, UV*uvscale/5.0).rgb;
 	
 	vec3 misturado = mix(grama, deserto, _n);
 	ALBEDO = misturado;

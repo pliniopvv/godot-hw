@@ -9,28 +9,16 @@ const center_offset = 0.5
 @export var Noise_Offset = 0.5
 @export var create_collision = false
 @export var remove_collision = false
-@export var grama : Texture2D
-@export var deserto : Texture2D
 
 var min_height = 0
 var max_height = 1
 
-var mat_grama
-var mat_deserto
-
 func _ready():
-	mat_grama = StandardMaterial3D.new()
-	mat_deserto = StandardMaterial3D.new()
-	mat_grama.set_texture(BaseMaterial3D.TEXTURE_ALBEDO, grama)
-	mat_deserto.set_texture(BaseMaterial3D.TEXTURE_ALBEDO, deserto)
-	
 	generate_terrain()
-
 
 func generate_terrain():
 	var a_mesh:ArrayMesh
 	var surftool = SurfaceTool.new()
-	surftool.set_material(mat_grama)
 	var n = FastNoiseLite.new()
 	n.noise_type = FastNoiseLite.TYPE_PERLIN
 	n.frequency = 0.1
@@ -48,13 +36,6 @@ func generate_terrain():
 			uv.y = percent.y
 
 			surftool.set_uv(uv)
-			
-			if ((percent.x > 0.5) and (percent.y > 0.5)):
-				if mat_deserto != null:
-					surftool.set_material(mat_grama)
-			else:
-				if mat_grama != null:
-					surftool.set_material(mat_grama)
 			surftool.add_vertex(vertex)
 			
 	var vert = 0
@@ -70,9 +51,6 @@ func generate_terrain():
 		vert+=1
 	surftool.generate_normals()
 	a_mesh = surftool.commit()
-	print("qtd surfaces: ",mesh.get_surface_count())
-	mesh.surface_set_material(0, mat_deserto)
-	mesh = a_mesh
 #	update_shader()
 #
 #func update_shader():

@@ -9,7 +9,6 @@ varying float normal_z;
 uniform float uvscale = 1.0;
 
 void fragment() {
-	vec3 vertice = vec3(normal_x,0,normal_z);
 	vec3 grama = texture(terrain, UV*uvscale).rgb;
 	vec3 deserto = texture(terrain2, UV*uvscale).rgb;
 	vec3 _n = texture(mNoise, UV*uvscale/100.0).rgb;

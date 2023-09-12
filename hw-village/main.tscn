@@ -1,0 +1,93 @@
+[gd_scene load_steps=9 format=3 uid="uid://cuvnxi70baghp"]
+
+[ext_resource type="Script" path="res://scripts/terrain.gd" id="1_4bxny"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="2_jea0d"]
+[ext_resource type="Script" path="res://scripts/HUDDebug.gd" id="3_4m7fp"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_42rf7"]
+sky_top_color = Color(0.482353, 0.596078, 0.988235, 1)
+sky_horizon_color = Color(0.756863, 0.817647, 0.991176, 1)
+ground_bottom_color = Color(0.545098, 0.67451, 0.976471, 1)
+ground_horizon_color = Color(0.756863, 0.817647, 0.991176, 1)
+
+[sub_resource type="Sky" id="Sky_cqp7j"]
+sky_material = SubResource("ProceduralSkyMaterial_42rf7")
+
+[sub_resource type="Environment" id="Environment_icxxv"]
+background_mode = 2
+sky = SubResource("Sky_cqp7j")
+tonemap_mode = 2
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_5fnib"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_uhbhv"]
+
+[node name="main" type="Node3D"]
+
+[node name="environment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_icxxv")
+
+[node name="sol" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 32, 11, 0)
+light_energy = 3.0
+
+[node name="terrain" type="Node3D" parent="."]
+script = ExtResource("1_4bxny")
+
+[node name="player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 2, 25)
+script = ExtResource("2_jea0d")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="player"]
+mesh = SubResource("CapsuleMesh_5fnib")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player"]
+shape = SubResource("CapsuleShape3D_uhbhv")
+
+[node name="camDiagonal" type="Camera3D" parent="player"]
+transform = Transform3D(1, 0, 0, 0, 0.825113, 0.564967, 0, -0.564967, 0.825113, 0, 10, 19)
+
+[node name="camTopDown" type="Camera3D" parent="player"]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866026, 0, -0.866025, 0.5, 0, 20, 9)
+current = true
+
+[node name="Control" type="Control" parent="." node_paths=PackedStringArray("x", "y")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("3_4m7fp")
+x = NodePath("HBoxContainer/pos/x")
+y = NodePath("HBoxContainer/pos/z")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer"]
+layout_mode = 2
+
+[node name="xlabel" type="Label" parent="Control/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "X"
+
+[node name="zlabel" type="Label" parent="Control/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Z
+"
+
+[node name="pos" type="VBoxContainer" parent="Control/HBoxContainer"]
+layout_mode = 2
+
+[node name="x" type="Label" parent="Control/HBoxContainer/pos"]
+layout_mode = 2
+text = "100"
+
+[node name="z" type="Label" parent="Control/HBoxContainer/pos"]
+layout_mode = 2
+text = "200"

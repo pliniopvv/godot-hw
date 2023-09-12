@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch4au1fwlx1xq"]
+
+[ext_resource type="PackedScene" uid="uid://bcw0nbvpqy8wp" path="res://assets/world/floor3.gltf" id="1_xtb1v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6scrx"]
+
+[node name="floor" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="chao" parent="." instance=ExtResource("1_xtb1v")]
+
+[node name="collision" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_6scrx")

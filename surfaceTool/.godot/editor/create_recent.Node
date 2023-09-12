@@ -1,5 +1,7 @@
+CharacterBody3D
+CollisionShape3D
+Camera3D
 MeshInstance3D
 DirectionalLight3D
 SpotLight3D
 WorldEnvironment
-Camera3D

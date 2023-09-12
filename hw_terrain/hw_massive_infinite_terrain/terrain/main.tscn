@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://bimlam60st4jt"]
+
+[ext_resource type="Shader" path="res://terrain/massive_infinite_terrain.gdshader" id="1_iit6i"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_scu2p"]
+sky_top_color = Color(0.133333, 0.431373, 0.847059, 1)
+sky_horizon_color = Color(0.582353, 0.64902, 0.744118, 1)
+ground_bottom_color = Color(0.196078, 0.164706, 0.129412, 1)
+ground_horizon_color = Color(0.582353, 0.64902, 0.744118, 1)
+
+[sub_resource type="Sky" id="Sky_8ebxc"]
+sky_material = SubResource("ProceduralSkyMaterial_scu2p")
+
+[sub_resource type="Environment" id="Environment_0c1dl"]
+background_mode = 2
+sky = SubResource("Sky_8ebxc")
+tonemap_mode = 2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t8jol"]
+render_priority = 0
+shader = ExtResource("1_iit6i")
+
+[sub_resource type="QuadMesh" id="QuadMesh_aemdr"]
+size = Vector2(32, 32)
+subdivide_width = 31
+subdivide_depth = 31
+orientation = 1
+
+[node name="main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0c1dl")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 6.23489, -23.5129)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("ShaderMaterial_t8jol")
+mesh = SubResource("QuadMesh_aemdr")

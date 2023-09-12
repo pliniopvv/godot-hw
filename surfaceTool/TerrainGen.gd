@@ -24,7 +24,7 @@ func generate_terrain():
 	n.noise_type = FastNoiseLite.TYPE_PERLIN
 	n.frequency = 0.1
 	
-	
+
 	surftool.begin(Mesh.PRIMITIVE_TRIANGLES)
 	for z in resolution+1:
 		for x in resolution+1:

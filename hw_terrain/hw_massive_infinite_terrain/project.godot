@@ -18,3 +18,18 @@ config/icon="res://icon.svg"
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+
+[shader_globals]
+
+heightmap={
+"type": "sampler2D",
+"value": "res://assets/heightmap.png"
+}
+normalmap={
+"type": "sampler2D",
+"value": "res://assets/normalmap.png"
+}
+amplitude={
+"type": "float",
+"value": 8.0
+}

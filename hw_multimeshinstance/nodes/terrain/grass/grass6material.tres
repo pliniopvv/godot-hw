@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b3o2pmwht5ast"]
+
+[ext_resource type="Texture2D" uid="uid://dax04v6vycgl7" path="res://assets/blender/grass/grass5_grass-alpha-grass.png" id="1_4i8nl"]
+[ext_resource type="Texture2D" uid="uid://1cn4rrmxlkok" path="res://assets/blender/grass/grass6_alpha-grass.png" id="2_j64q6"]
+
+[resource]
+resource_name = "Materiais"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_4i8nl")
+roughness = 0.0
+normal_enabled = true
+normal_texture = ExtResource("2_j64q6")
+ao_enabled = true
+ao_light_affect = 1.0
+backlight_enabled = true
+backlight = Color(1, 1, 1, 1)

@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://f0ekqe6q8tou"]
+
+[resource]
+resource_name = "Materiais"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_color = Color(0, 0.839216, 0, 1)
+albedo_texture_force_srgb = true
+roughness = 0.5
+ao_enabled = true
+ao_light_affect = 0.5
+backlight_enabled = true
+backlight = Color(1, 1, 1, 1)

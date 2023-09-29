@@ -51,12 +51,13 @@ func generate_terrain():
 		vert+=1
 	surftool.generate_normals()
 	a_mesh = surftool.commit()
-#	update_shader()
+	mesh = a_mesh
+	update_shader()
 #
-#func update_shader():
-#	var mat = get_active_material(0)
-#	mat.set_shader_parameter("min_height", min_height)
-#	mat.set_shader_parameter("max_height", max_height)
+func update_shader():
+	var mat = get_active_material(0)
+	mat.set_shader_parameter("min_height", min_height)
+	mat.set_shader_parameter("max_height", max_height)
 
 func draw_sphere(pos: Vector3):
 	var ins = MeshInstance3D.new()

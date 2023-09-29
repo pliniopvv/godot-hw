@@ -1,0 +1,45 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://qjk78b3rb1nt"
+path="res://.godot/imported/grass5.gltf-cbd373cfdb34a5b034862f093b6647ce.scn"
+
+[deps]
+
+source_file="res://assets/blender/grass/grass5.gltf"
+dest_files=["res://.godot/imported/grass5.gltf-cbd373cfdb34a5b034862f093b6647ce.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"meshes": {
+"grass5_Plano": {
+"generate/lightmap_uv": 0,
+"generate/lods": 1,
+"generate/shadow_meshes": 1,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://nodes/terrain/grass/grass5.res"
+}
+}
+}
+gltf/embedded_image_handling=1

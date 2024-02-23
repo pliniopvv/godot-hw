@@ -1,0 +1,141 @@
+[gd_scene load_steps=4 format=3 uid="uid://dk0bokvr6wk4v"]
+
+[ext_resource type="PackedScene" uid="uid://bs1cs5yvgmwn" path="res://scenes/blocks/v2/faixadepedestre.tscn" id="1_8nb0y"]
+[ext_resource type="PackedScene" uid="uid://cluxdniango76" path="res://scenes/blocks/v2/calcada.tscn" id="2_2y2yk"]
+[ext_resource type="PackedScene" uid="uid://deibycaigufry" path="res://scenes/blocks/v2/rua.tscn" id="2_ewxts"]
+
+[node name="quadra" type="Node3D"]
+
+[node name="faixadepedestre" parent="." instance=ExtResource("1_8nb0y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -7)
+
+[node name="rua" parent="." instance=ExtResource("2_ewxts")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -7)
+
+[node name="rua2" parent="." instance=ExtResource("2_ewxts")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
+
+[node name="rua3" parent="." instance=ExtResource("2_ewxts")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -7)
+
+[node name="faixadepedestre2" parent="." instance=ExtResource("1_8nb0y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
+
+[node name="faixadepedestre3" parent="." instance=ExtResource("1_8nb0y")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7, 0, -4)
+
+[node name="rua4" parent="." instance=ExtResource("2_ewxts")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7, 0, -2)
+
+[node name="rua5" parent="." instance=ExtResource("2_ewxts")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7, 0, 0)
+
+[node name="rua6" parent="." instance=ExtResource("2_ewxts")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7, 0, 2)
+
+[node name="faixadepedestre4" parent="." instance=ExtResource("1_8nb0y")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7, 0, 4)
+
+[node name="faixadepedestre5" parent="." instance=ExtResource("1_8nb0y")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7, 0, -4)
+
+[node name="rua7" parent="." instance=ExtResource("2_ewxts")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7, 0, -2)
+
+[node name="rua8" parent="." instance=ExtResource("2_ewxts")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7, 0, 0)
+
+[node name="rua9" parent="." instance=ExtResource("2_ewxts")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7, 0, 2)
+
+[node name="faixadepedestre6" parent="." instance=ExtResource("1_8nb0y")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7, 0, 4)
+
+[node name="faixadepedestre7" parent="." instance=ExtResource("1_8nb0y")]
+transform = Transform3D(-1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, -1, 4, 0, 7)
+
+[node name="rua10" parent="." instance=ExtResource("2_ewxts")]
+transform = Transform3D(-1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, -1, 2, 0, 7)
+
+[node name="rua11" parent="." instance=ExtResource("2_ewxts")]
+transform = Transform3D(-1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, -1, 0, 0, 7)
+
+[node name="rua12" parent="." instance=ExtResource("2_ewxts")]
+transform = Transform3D(-1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, -1, -2, 0, 7)
+
+[node name="faixadepedestre8" parent="." instance=ExtResource("1_8nb0y")]
+transform = Transform3D(-1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, -1, -4, 0, 7)
+
+[node name="calcada" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="calcada2" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -4)
+
+[node name="calcada3" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="calcada4" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4)
+
+[node name="calcada11" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4, 0, -2)
+
+[node name="calcada16" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4, 0, 0)
+
+[node name="calcada17" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4, 0, 2)
+
+[node name="calcada5" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="calcada7" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4)
+
+[node name="calcada8" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="calcada9" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+
+[node name="calcada18" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+
+[node name="calcada19" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="calcada20" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="calcada21" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="calcada22" parent="." instance=ExtResource("2_2y2yk")]
+
+[node name="calcada23" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="calcada24" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+
+[node name="calcada25" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="calcada26" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+
+[node name="calcada10" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="calcada12" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4, 0, -2)
+
+[node name="calcada13" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4, 0, 0)
+
+[node name="calcada14" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4, 0, 2)
+
+[node name="calcada15" parent="." instance=ExtResource("2_2y2yk")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4, 0, 4)

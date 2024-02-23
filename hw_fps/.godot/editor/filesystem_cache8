@@ -1,7 +1,7 @@
-2a60927148abd1d33b818b535e306557
-::res://::1694447915
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1708730158
 icon.svg::CompressedTexture2D::5125344517843251130::1692715241::1692715305::1::::<><>::
-play.tscn::PackedScene::4616808165130043152::1693931656::0::1::::<><>::uid://dg72na85hae2v<>uid://dn56400swd8y1<>uid://glem7utf2upp<>res://scripts/hud.gd
+play.tscn::PackedScene::4616808165130043152::1693931656::0::1::::<><>::uid://dg72na85hae2v::::res://nodes/world.tscn<>uid://dn56400swd8y1::::res://nodes/player.tscn<>uid://glem7utf2upp::::res://nodes/hud.tscn<>res://scripts/hud.gd
 ::res://autoloads/::1693143968
 HUD.gd::GDScript::-1::1692722914::0::1::::<>Node<>::
 ::res://nodes/::1693931656

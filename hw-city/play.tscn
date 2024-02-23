@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkiyb00m3uelq"]
+[gd_scene load_steps=6 format=3 uid="uid://dkiyb00m3uelq"]
 
 [ext_resource type="PackedScene" uid="uid://cm534qxjl6n7h" path="res://scenes/world.tscn" id="1_ihy6j"]
+[ext_resource type="PackedScene" uid="uid://dk0bokvr6wk4v" path="res://levels/blocks/quadra.tscn" id="2_kueh1"]
 
 [sub_resource type="GDScript" id="GDScript_1j3gw"]
 script/source = "extends CharacterBody3D
@@ -44,14 +45,22 @@ func _physics_process(delta):
 
 [node name="Kernel" type="Node"]
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 3, 0)
+shadow_enabled = true
+sky_mode = 1
+
 [node name="world" parent="." instance=ExtResource("1_ihy6j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+visible = false
 
 [node name="world2" parent="." instance=ExtResource("1_ihy6j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, -22)
+visible = false
 
 [node name="world3" parent="." instance=ExtResource("1_ihy6j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 0)
+visible = false
 
 [node name="player" type="CharacterBody3D" parent="."]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 1, 1, 0)
@@ -69,6 +78,13 @@ visible = false
 
 [node name="fps_camera" type="Camera3D" parent="player"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0.653327, -0.552208)
+current = true
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 16.7733, 19.9764)
+[node name="quadra" parent="." instance=ExtResource("2_kueh1")]
+
+[node name="quadra2" parent="." instance=ExtResource("2_kueh1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+shadow_enabled = true

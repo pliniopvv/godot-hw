@@ -23,5 +23,4 @@ func _ready():
 	st.add_vertex(Vector3(1, 1, 0))
 
 	# Commit to a mesh.
-	var mesh = st.commit()
-	$world.add_child(mesh)
+	mesh = st.commit()

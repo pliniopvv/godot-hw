@@ -1,6 +1,9 @@
+OmniLight3D
+CollisionShape3D
+StaticBody3D
+GridMap
 Camera3D
 DirectionalLight3D
-CollisionShape3D
 MeshInstance3D
 CharacterBody3D
 Node3D

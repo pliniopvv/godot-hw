@@ -1,2 +1,5 @@
 res://play.tscn
 res://nodes/player.tscn
+res://autoloads/HUD.gd
+res://scripts/action.gd
+res://scripts/hud.gd
